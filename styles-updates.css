@@ -1,0 +1,105 @@
+html {
+      opacity: 0;
+      transition: opacity 0.5s ease;
+    }
+    html.fade-in {
+      opacity: 1;
+    }
+    html.fade-out {
+      opacity: 0;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      position: relative;
+      font-family: 'Be Vietnam Pro', sans-serif;
+      min-height: 100vh;
+      background: url('background.jpeg') no-repeat center/cover fixed;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+    }
+
+    .back-button {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      display: flex;
+      align-items: center;
+      gap: 0.3em;
+      padding: 0.6em 1em;
+      background-color: rgba(255,255,255,0.3);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-radius: 25px;
+      text-decoration: none;
+      color: #000;
+      font-weight: 500;
+      transition: background-color 0.2s ease;
+    }
+    .back-button:hover {
+      background-color: rgba(255,255,255,0.35);
+    }
+    .back-button svg {
+      width: 1em;
+      height: 1em;
+      stroke: currentColor;
+      stroke-width: 2;
+      fill: none;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 960px;
+      background-color: rgba(255,255,255,0.3);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-radius: 25px;
+      padding: 2rem;
+      color: #000;
+    }
+
+    .container h1 {
+      font-size: 2.5rem;
+      text-align: center;
+      margin-bottom: 0.5em;
+    }
+    .container p.subtitle {
+      font-size: 1.2rem;
+      text-align: center;
+      margin-bottom: 1.5em;
+      color: #333;
+    }
+    .content {
+      line-height: 1.6;
+    }
+    .content h2 {
+      margin-top: 1.5em;
+      margin-bottom: 0.5em;
+      font-size: 1.8rem;
+      border-bottom: 2px solid rgba(0,0,0,0.2);
+      padding-bottom: 0.2em;
+    }
+    .content p {
+      margin-bottom: 1em;
+      font-size: 1rem;
+    }
+
+    @media (max-width: 600px) {
+      .back-button {
+        top: 10px;
+        left: 10px;
+        padding: 0.4em 0.8em;
+      }
+      .container h1 { font-size: 2rem; }
+      .container p.subtitle { font-size: 1rem; }
+      .content h2 { font-size: 1.5rem; }
+      .content p { font-size: 0.9rem; }
+    }
