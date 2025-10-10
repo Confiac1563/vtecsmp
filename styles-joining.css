@@ -76,17 +76,6 @@
       .btn::before,
       .copy-toast { font-size: .8rem; }
     }
-    html {
-      opacity: 0;
-      transition: opacity 0.5s ease;
-    }
-    html.fade-in {
-      opacity: 1;
-    }
-    html.fade-out {
-      opacity: 0;
-    }
-
     * {
       margin: 0;
       padding: 0;

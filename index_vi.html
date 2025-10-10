@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Trang Chủ</title>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles-mainpage.css">
+  <style>
+    /* CSS cho nút chọn ngôn ngữ */
+    .lang-switch {
+      position: absolute;
+      top: 15px;
+      right: 20px;
+    }
+    .lang-switch select {
+      padding: 6px 10px;
+      font-size: 14px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      cursor: pointer;
+    }
+  </style>
+  <script>
+    function changeLang(select) {
+      const url = select.value;
+      if (url) {
+        window.location.href = url;
+      }
+    }
+  </script>
+</head>
+<body>
+  <!-- Góc phải trên cùng -->
+  <div class="lang-switch">
+    <select onchange="changeLang(this)">
+      <option value="">🌐 Ngôn ngữ</option>
+      <option value="index_vi.html">Tiếng Việt</option>
+      <option value="index_en.html">English</option>
+    </select>
+  </div>
+
+  <div class="hero">
+    <h1>VTEC SMP</h1>
+    <p>Máy chủ SMP đơn giản, ấm cúng và vui vẻ <3 </p>
+    <div class="buttons">
+      <a href="updates_vi.html" class="btn" data-tooltip="Liên quan đến các bản cập nhật máy chủ gần đây">Cập nhật</a>
+      <a href="joining_vi.html" class="btn" data-tooltip="Cách tham gia máy chủ">Hướng dẫn</a>
+      <a href="social_vi.html" class="btn" data-tooltip="Tài khoản mạng xã hội của chủ sở hữu">Mạng xã hội</a>
+    </div>
+  </div>
+</body>
+</html>
